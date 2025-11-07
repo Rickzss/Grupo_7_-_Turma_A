@@ -10,8 +10,10 @@ import java.util.Scanner;
  *
  * @author henrique.gespindola
  */
+
 public class CasteloInfinito {
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -42,7 +44,7 @@ public class CasteloInfinito {
 
                     break;
                 case 2:
-                    //jogar(sc); //===== Puxa para outra tela ======
+                    jogar(sc); //===== Puxa para outra tela ======
                     break;
                 case 3:
                     System.out.println("Desenvolvido pelo GRUPO 7 Turma A pelos alunos: \n"
@@ -64,6 +66,23 @@ public class CasteloInfinito {
 
         } while (opcao != 4);
 
-    }   
-}
+    }
+    
+    // ================================= ESCOLHA DO NÍVEL =================================
+    public static void jogar(Scanner sc) {
 
+        System.out.println("Escolha uma opção para seguir \n");
+        System.out.println("Oopção 1: Criativo (Demon Slayer)");
+        System.out.println("Opção 2: Logico (Spider-Man)\n");
+        System.out.println("Escolha uma opção: ");
+        int escolha = sc.nextInt();
+
+        if (escolha == 1) {
+            //jogarCriativo(sc);
+        } else if (escolha == 2) {
+            //jogarLogico(sc);
+        } else {
+            System.out.println("Opção inválida! Escolha uma opção de 1 a 2:");
+        }
+    }
+}
