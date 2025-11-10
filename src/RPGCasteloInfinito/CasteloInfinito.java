@@ -1,15 +1,7 @@
-/*
-* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-* Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package RPGCasteloInfinito;
 
 import java.util.Scanner;
 
-/**
- *
- * @author henrique.gespindola
- */
 public class CasteloInfinito {
 
     public static void main(String[] args) {
@@ -20,7 +12,7 @@ public class CasteloInfinito {
 
         // ================================= MENU DO JOGO =================================
         do {
-
+       
             System.out.println("==========================");
             System.out.println("==== Castelo Infinito ====");
             System.out.println("==========================\n");
@@ -109,7 +101,7 @@ public class CasteloInfinito {
             return;
         }
         errosTotais += errosFase2;
-        
+       
         // --- Fase 3: Laçodo-while ---
         int errosFase3 = labirintoCastelo(sc);
         if (errosFase3 == -1) {
@@ -117,7 +109,7 @@ public class CasteloInfinito {
             return;
         }
         errosTotais += errosFase3;
-        
+       
          // --- Fase 4: Laçodo-while ---
         int errosFase4 = venenoWisteria(sc);
         if (errosFase4 == -1) {
@@ -125,6 +117,21 @@ public class CasteloInfinito {
             return;
         }
         errosTotais += errosFase4;
+       
+        int errosFase5 = Combate1(sc);
+        if (errosFase5 == -1) {
+            System.out.println("\n  A poeira ainda está descendo AUMENTANDO. \n");
+            return;
+        }
+        errosTotais += errosFase5;
+       
+        int errosFase6 = combate2(sc);
+        if (errosFase6 == -1) {
+            System.out.println("\n  A poeira ainda está descendo AUMENTANDO. \n");
+            return;
+        }        
+
+        errosTotais += errosFase6;
 
         // --- Finalização e RANK ---
         exibirRanking(errosTotais);
@@ -211,11 +218,11 @@ public class CasteloInfinito {
           final String respostaCorreta = "C";
           int tentativas = 0;
           int erros = 0;
-          
+         
           System.out.println("\n--- FASE 3: O Labirinto do Castelo Infinito (Laço do-while) ---");
           System.out.println("Nezuko está aprisionada no Castelo Infinito, onde as portas se movem incessantemente.");
           System.out.println("Ela tenta abrir uma porta, mesmo que não tenha a chave. O laço do-while é usado para modelar sua primeira tentativa obrigatória.");
-    
+   
           while (tentativas < 3) {
               tentativas++;
             System.out.println("\nPERGUNTA: Se a variável booleana temChave for inicializada como false, o que acontecerá com o código abaixo? (Tentativa" + tentativas + "/3)");
@@ -276,12 +283,90 @@ public class CasteloInfinito {
                 }
             }
         }
-            
-          
+           
+         
               System.out.println("\n Voce atingiu o limite de tentativas! O veneno de Wisteria foi lançado...");
         return -1;
-            } 
+            }
          
+            public static int Combate1(Scanner sc) {
+              
+       
+       
+        int tentativas = 0 ;
+        int erros = 0;
+                System.out.println(" \nFASE5: No corredor do Castelo Infinito, você percebe que o chão inteiro está coberto por fios quase invisíveis.");
+                System.out.println("Cada passo desperta um boneco controlado por Hisoka");
+                System.out.println(" acertes as perguntas e tente derrotalo ");
+       
+        while ( tentativas < 3){
+            tentativas++;
+      String resposta;
+       
+            System.out.println(" voce tem 3 tentativas ");
+        System.out.println(" Qual laço de repetição executa pelo menos UMA! vez antes de testar a condição?");
+        System.out.println("a) for");
+        System.out.println("b) while");
+        System.out.println("c) do-while");
+        resposta = sc.next().toUpperCase();
+       
+
+        if (resposta.equalsIgnoreCase("c")) {
+            System.out.println(" voçê acerta a pergunta e consegue dar mais um passo ");
+           
+            return erros;
+        }  else  {
+            erros++;
+            if (resposta.matches("[A-C]")) {
+                    System.out.println("INCORRETO! voce da um passo errado e surge uns dos bonecos do Hisoka");
+                } else {
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                }
+           
+        }
+       
+        }
+         System.out.println("\n Voce atingiu o limite de tentativas! Hisoka despertou muitos bonecos");
+        return -1;
+            }
+           
+            public static int combate2(Scanner sc){
+               
+                String resposta;
+                int tentativas = 0;
+                int erros = 0;
+               
+                while (tentativas < 3){
+                    tentativas++;
+                 System.out.println(" 2Round ");
+                    System.out.println(" voce tem 3 tentativas ");
+        System.out.println(" Qual laço é ideal quando você sabe exatamente quantas repetições deseja?");
+        System.out.println("a) for");
+        System.out.println("b) while");
+        System.out.println("c) do-while");
+        resposta = sc.next().toUpperCase();
+
+        if (resposta.equalsIgnoreCase("a")) {
+            System.out.println("voçê acerta a pergunta e consegue dar mais um passo");
+           return erros;
+        } else {
+            erros++;
+            if (resposta.matches("[A-C]")) {
+                    System.out.println("INCORRETO! voce da um passo errado e surge uns dos bonecos do Hisoka ");
+                } else {
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                }
+         
+       
+
+        }
+       
+       
+                }
+                System.out.println("\n Voce atingiu o limite de tentativas! Hisoka despertou muitos bonecos");
+                return -1;
+            }
+           
     // =================================== RANKING FINAL =====================================
     public static void exibirRanking(int errosTotais) {
 
