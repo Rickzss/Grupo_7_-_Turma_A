@@ -18,7 +18,7 @@ public class CasteloInfinito {
 
         int opcao;
 
-        // ================================= MENU DO JGO =================================
+        // ================================= MENU DO JOGO =================================
         do {
 
             System.out.println("==========================");
@@ -109,6 +109,22 @@ public class CasteloInfinito {
             return;
         }
         errosTotais += errosFase2;
+        
+        // --- Fase 3: Laçodo-while ---
+        int errosFase3 = labirintoCastelo(sc);
+        if (errosFase3 == -1) {
+            System.out.println("\nVoce ficou preso no castelo! Retornando ao menu de niveis...\n");
+            return;
+        }
+        errosTotais += errosFase3;
+        
+         // --- Fase 4: Laçodo-while ---
+        int errosFase4 = venenoWisteria(sc);
+        if (errosFase4 == -1) {
+            System.out.println("\n O veneno foi lançado! Retornando ao menu de niveis...\n");
+            return;
+        }
+        errosTotais += errosFase4;
 
         // --- Finalização e RANK ---
         exibirRanking(errosTotais);
@@ -144,7 +160,7 @@ public class CasteloInfinito {
                 if (respostaUsuario.matches("[A-D]")) {
                     System.out.println("INCORRETO! O foco nao foi atingido.");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! (Contabilizada como tentativa/erro). Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
                 }
             }
         }
@@ -182,7 +198,7 @@ public class CasteloInfinito {
                 if (respostaUsuario.matches("[A-D]")) {
                     System.out.println("INCORRETO! A sequencia do balanco esta errada.");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! (Contabilizada como tentativa/erro). Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
                 }
             }
         }
@@ -190,7 +206,82 @@ public class CasteloInfinito {
         System.out.println("\nVoce atingiu o limite de tentativas! O Aranha perdeu o balanco...");
         return -1;
     }
+        // =================================== DESAFIO 3 =========================================
+         public static int labirintoCastelo(Scanner sc) {
+          final String respostaCorreta = "C";
+          int tentativas = 0;
+          int erros = 0;
+          
+          System.out.println("\n--- FASE 3: O Labirinto do Castelo Infinito (Laço do-while) ---");
+          System.out.println("Nezuko está aprisionada no Castelo Infinito, onde as portas se movem incessantemente.");
+          System.out.println("Ela tenta abrir uma porta, mesmo que não tenha a chave. O laço do-while é usado para modelar sua primeira tentativa obrigatória.");
+    
+          while (tentativas < 3) {
+              tentativas++;
+            System.out.println("\nPERGUNTA: Se a variável booleana temChave for inicializada como false, o que acontecerá com o código abaixo? (Tentativa" + tentativas + "/3)");
+            System.out.println("A) O laço executa infinitamente, travando o jogo.");
+            System.out.println("B) A mensagem \"Nezuko tenta abrir a porta.\" não será exibida.");
+            System.out.println("C) A mensagem \"Nezuko tenta abrir a porta.\" será exibida apenas uma vez.");
+            System.out.println("D) A mensagem \"A porta não abre.\" nunca será exibida.");
+            System.out.print("Sua resposta (A, B, C ou D): ");
 
+            String respostaUsuario = sc.next().toUpperCase();
+
+            if (respostaUsuario.equals(respostaCorreta)) {
+                System.out.println("Correto! O 'do-while' sempre executa o bloco 'do' pelo menos uma vez antes de checar a condição.\n");
+                return erros;
+            } else {
+                erros++;
+                if (respostaUsuario.matches("[A-D]")) {
+                    System.out.println("INCORRETO! Tente outra vez.");
+                } else {
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                }
+            }
+        }
+          System.out.println("\nVoce atingiu o limite de tentativas! A Nezuko ficou presa no castelo...");
+        return -1;
+         }
+
+         // =================================== DESAFIO 4 =========================================
+            public static int venenoWisteria(Scanner sc) {
+              final String respostaCorreta = "B";
+              int tentativas = 0;
+              int erros = 0;
+             
+             System.out.println("\n--- FASE 4: A Contagem Regressiva do Veneno de Wisteria (Laço for aninhado) ---");
+             System.out.println("Para derrotar o Demonio, Kanao precisa aplicar 3 doses de veneno de Wisteria em 4 alvos diferentes.");
+             System.out.println("O número total de aplicações será calculado por um laço for aninhado.");
+             
+              while (tentativas < 3) {
+              tentativas++;
+            System.out.println("\nPERGUNTA: No código a seguir, que representa o ataque, qual será o último valor exibido para a variável aplicacoes após a execução completa dos laços? (Tentativa" + tentativas + "/3)");
+            System.out.println("A) 7");
+            System.out.println("B) 12");
+            System.out.println("C) 10");
+            System.out.println("D) 4");
+            System.out.print("Sua resposta (A, B, C ou D): ");
+
+            String respostaUsuario = sc.next().toUpperCase();
+
+            if (respostaUsuario.equals(respostaCorreta)) {
+                System.out.println("Correto! O laço externo (4) multiplica as execuções do laço interno (3). 4 * 3 = 12.\n");
+                return erros;
+            } else {
+                erros++;
+                if (respostaUsuario.matches("[A-D]")) {
+                    System.out.println("INCORRETO! O veneno será lançado a qualquer momento.");
+                } else {
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                }
+            }
+        }
+            
+          
+              System.out.println("\n Voce atingiu o limite de tentativas! O veneno de Wisteria foi lançado...");
+        return -1;
+            } 
+         
     // =================================== RANKING FINAL =====================================
     public static void exibirRanking(int errosTotais) {
 
