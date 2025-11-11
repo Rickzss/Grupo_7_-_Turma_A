@@ -90,6 +90,7 @@ public class CasteloInfinito {
         int errosFase1 = desafioRespiracaoConcentrada(sc);
         if (errosFase1 == -1) {
             System.out.println("\nVoce falhou em manter a respiracao! Retornando ao menu de niveis...\n");
+            jogar(sc);
             return;
         }
         errosTotais += errosFase1;
@@ -98,6 +99,7 @@ public class CasteloInfinito {
         int errosFase2 = desafioBalancoAranha(sc);
         if (errosFase2 == -1) {
             System.out.println("\nVoce caiu durante o balanco! Retornando ao menu de niveis...\n");
+            jogar(sc);
             return;
         }
         errosTotais += errosFase2;
@@ -106,6 +108,7 @@ public class CasteloInfinito {
         int errosFase3 = labirintoCastelo(sc);
         if (errosFase3 == -1) {
             System.out.println("\nVoce ficou preso no castelo! Retornando ao menu de niveis...\n");
+            jogar(sc);
             return;
         }
         errosTotais += errosFase3;
@@ -114,13 +117,15 @@ public class CasteloInfinito {
         int errosFase4 = venenoWisteria(sc);
         if (errosFase4 == -1) {
             System.out.println("\n O veneno foi lançado! Retornando ao menu de niveis...\n");
+            jogar(sc);
             return;
         }
         errosTotais += errosFase4;
 
         int errosFase5 = Combate1(sc);
         if (errosFase5 == -1) {
-            System.out.println("\n  A poeira ainda está descendo AUMENTANDO. \n");
+            System.out.println("\n  A poeira ainda esta descendo AUMENTANDO. \n");
+            jogar(sc);
             return;
         }
         errosTotais += errosFase5;
@@ -128,6 +133,7 @@ public class CasteloInfinito {
         int errosFase6 = combate2(sc);
         if (errosFase6 == -1) {
             System.out.println("\n  A poeira ainda está descendo AUMENTANDO. \n");
+            jogar(sc);
             return;
         }
 
@@ -370,18 +376,17 @@ public class CasteloInfinito {
 
         int errosTotais = 0;
 
-        // --- Fase 1: Laço while ---
-        int errosFase1 = desafioTeiaRepetitiva(sc);
-        if (errosFase1 == -1) {
+            // --- Fase 1: Laço while ---
+            int errosFase1 = desafioTeiaRepetitiva(sc);
+            if (errosFase1 == -1) {
             System.out.println("Voce falhou no sentido aranha! Retornando ao menu de niveis...\n");
             jogar(sc);
             return;
         }
-        errosTotais += errosFase1;
+             errosTotais += errosFase1;
 
-        //--- Fase 2: Laço for ---
-        int errosFase2 = desafioContagemRespiracao(sc);
-        {
+            //--- Fase 2: Laço for ---
+            int errosFase2 = desafioContagemRespiracao(sc);{
             if (errosFase2 == -1) {
                 System.out.println("Voce errou na contagem dos ataques! Retornando ao menu de niveis...\n");
                 jogar(sc);
@@ -399,7 +404,7 @@ public class CasteloInfinito {
             errosTotais += errosFase3;
 
             // --- Fase 4: Laço While ---
-             int errosFase4 = desafioBalancoSpiderMan(sc);
+            int errosFase4 = desafioBalancoSpiderMan(sc);
             if (errosFase4 == -1) {
             System.out.println("Voce falhou no lancamento das teias! Retornando ao menu de niveis...\n");
             jogar(sc);
@@ -407,7 +412,7 @@ public class CasteloInfinito {
             }
             errosTotais += errosFase4;
             
-// --- Fase 5: Laco For ---
+            // --- Fase 5: Laco For ---
             int errosFase5 = desafioFormaDeRespiracao(sc);
             if (errosFase5 == -1) {
              System.out.println("Voce falhou na concentracao da respiracao! Retornando ao menu de niveis...\n");
