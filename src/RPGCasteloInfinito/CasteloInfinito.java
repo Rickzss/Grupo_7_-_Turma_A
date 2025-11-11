@@ -406,14 +406,16 @@ public class CasteloInfinito {
             return;
             }
             errosTotais += errosFase4;
-            // --- Fase 5: Laco For ---
-            // int errosFase5 = desafioFormaDeRespiracao(sc);
-            //if (errosFase5 == -1) {
-            // System.out.println("Voce falhou na concentracao da respiracao! Retornando ao menu de niveis...\n");
-            // jogar(sc);
-            // return;
-            // }
-            //errosTotais += errosFase5;
+            
+// --- Fase 5: Laco For ---
+            int errosFase5 = desafioFormaDeRespiracao(sc);
+            if (errosFase5 == -1) {
+             System.out.println("Voce falhou na concentracao da respiracao! Retornando ao menu de niveis...\n");
+            jogar(sc);
+             return;
+             }
+            errosTotais += errosFase5;
+            
             // --- Fase 6: Laco do-while ---
             //int errosFase6 = desafioProvaCasteloInfinito(sc);
             // if (errosFase6 == -1) {
@@ -616,6 +618,47 @@ public class CasteloInfinito {
 
     }
 
+    // =================================== DESAFIO 5 ===================================
+    public static int desafioFormaDeRespiracao(Scanner sc) {
+
+        final String respostaCorreta = "A";
+        int tentativas = 0;
+        int erros = 0;
+
+        while (tentativas < 3) {
+            tentativas++;
+            System.out.println("\n--- Fase 5: Forma de respiracao (Laco For) ---");
+            System.out.println("Tanjiro precisa realizar exatamente 10 cortes");
+            System.out.println("\nQual laco permite controlar INICIALIZACAO, CONDICAO e INCREMENTO de forma concisa no cabecalho? (Tentativa " + tentativas + " /3)\n");
+            System.out.println("A) int i = 1; i <= 10; i++"); // Resposta correta
+            System.out.println("B) i <= 10");
+            System.out.println("C) while (i < 10)");
+            System.out.println("D) do { ... } while (i < 10)\n");
+            System.out.println("Sua resposta (A, B, C ou D):\n");
+
+            String respostaUsuario = sc.next().toUpperCase();
+
+            if (respostaUsuario.equals(respostaCorreta)) {
+                System.out.println("Correto! O 'for' e perfeito para contagens fixas.");
+                return erros;
+            } else {
+                erros++;
+                if (respostaUsuario.matches("[A-D]")) {
+                    System.out.println("Incorreto! Voce sofreu 30 de dano. Tente novamente\n");
+                } else {
+                    System.out.println("Resposta invalida! Por favor, digite apenas A, B, C ou D.\n");
+
+                }
+
+            }
+
+        }
+
+        System.out.println("\n Voce atingiu o limite de tentativas! Falha na concentracao da respiração...\n");
+        return -1;
+    }
+
+    
     // =================================== RANKING FINAL =====================================
     public static void exibirRanking(int errosTotais) {
 
