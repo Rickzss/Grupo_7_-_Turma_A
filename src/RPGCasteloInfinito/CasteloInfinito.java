@@ -399,13 +399,13 @@ public class CasteloInfinito {
             errosTotais += errosFase3;
 
             // --- Fase 4: Laço While ---
-            // int errosFase4 = desafioBalancoSpiderMan(sc);
-            //if (errosFase4 == -1) {
-            //System.out.println("Voce falhou no lancamento das teias! Retornando ao menu de niveis...\n");
-            //jogar(sc);
-            //return;
-            //}
-            //errosTotais += errosFase4;
+             int errosFase4 = desafioBalancoSpiderMan(sc);
+            if (errosFase4 == -1) {
+            System.out.println("Voce falhou no lancamento das teias! Retornando ao menu de niveis...\n");
+            jogar(sc);
+            return;
+            }
+            errosTotais += errosFase4;
             // --- Fase 5: Laco For ---
             // int errosFase5 = desafioFormaDeRespiracao(sc);
             //if (errosFase5 == -1) {
@@ -575,6 +575,45 @@ public class CasteloInfinito {
         }
         System.out.println("\n Voce atingiu o limite de tentativas! Falha no resgate das vitimas...\n");
         return -1;
+    }
+// =================================== DESAFIO 4 ===================================
+    public static int desafioBalancoSpiderMan(Scanner sc) {
+
+        final String respostaCorreta = "D";
+        int tentativas = 0;
+        int erros = 0;
+
+        while (tentativas < 3) {
+            tentativas++;
+            System.out.println("\n--- Fase 4: O Balanco (Laco While) ---");
+            System.out.println("O Spider-Man balanca enquanto houver energia na teia (> 0).");
+            System.out.println("\nQual a sintaxe correta para um laco com numero de iteracoes incerto? (Tentativa " + tentativas + " /3)\n");
+            System.out.println("A) for (int i = 5; i > 0; i--)");
+            System.out.println("B) do");
+            System.out.println("C) if (energiaTeia > 0)");
+            System.out.println("D) while (energiaTeia > 0)\n"); // Resposta correta
+            System.out.println("Sua resposta (A, B, C ou D):\n");
+
+            String respostaUsuario = sc.next().toUpperCase();
+
+            if (respostaUsuario.equals(respostaCorreta)) {
+                System.out.println("Correto! O 'while' e o ideal para condicoes continuas.");
+                return erros;
+            } else {
+                erros++;
+                if (respostaUsuario.matches("[A-D]")) {
+                    System.out.println("Incorreto! Voce sofreu 20 de dano. Tente novamente\n");
+                } else {
+                    System.out.println("Resposta invalida! Por favor, digite apenas A, B, C ou D.\n");
+
+                }
+
+            }
+
+        }
+        System.out.println("\n Voce atingiu o limite de tentativas! Falha no lancamento da teia...\n");
+        return -1;
+
     }
 
     // =================================== RANKING FINAL =====================================
