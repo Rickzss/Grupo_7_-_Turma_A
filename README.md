@@ -71,7 +71,7 @@ Explicações mais descritivas envolvendo:
 -------------------------------------------------------------------------
 ## **Exemplo de Execução**
 
-=== SISTEMA DE IDENTIDADE SECRETA ===<br>
+> === SISTEMA DE IDENTIDADE SECRETA ===<br>
 Digite o nome do seu personagem:<br>
 > Takeo<br>
 Deseja ter a identidade secreta?<br>
