@@ -9,14 +9,17 @@
 RPG Castelo Infinito é um jogo textual desenvolvido em Java como projeto acadêmico do Grupo 7 da turma A de ADS (Senac).
 
 O objetivo principal é ensinar e reforçar os conceitos de laços de repetição de forma divertida através de narrativa temática inspirada em:
+
 •	⚔️ Demon Slayer – Castelo Infinito
 •	🕸️ Marvel’s Spider-Man
 
 Durante o jogo, o jogador entra no castelo, escolhe sua identidade (real ou secreta), enfrenta desafios e responde perguntas relacionadas a:
+
 •	while
 •	for
 •	do-while
 •	laços aninhados
+
 -------------------------------------------------------------------------
 ## 🧠 Objetivo Educacional
 
@@ -28,6 +31,7 @@ Cada fase apresenta:
 •	Um desafio técnico sobre loops
 
 Isso torna o estudo interativo, contextualizado e memorável.
+
 -------------------------------------------------------------------------
 ## 🚀 Funcionalidades
 
@@ -38,6 +42,7 @@ Isso torna o estudo interativo, contextualizado e memorável.
 ✔ Ranking final baseado no desempenho
 ✔ Narrativa inspirada em animes e heróis
 ✔ Jogabilidade totalmente no console
+
 -------------------------------------------------------------------------
 ## 🧩 Modos de Jogo
 
@@ -60,6 +65,7 @@ Explicações mais descritivas envolvendo:
 •	Respiração de Tanjiro
 •	Cenários dentro do Castelo Infinito
 •	Situações de resgate e combate
+
 -------------------------------------------------------------------------
 ## 🖥️ Exemplo de Execução
 
@@ -76,12 +82,14 @@ Digite sua escolha:
 === IDENTIDADE DEFINIDA ===
 Nome do herói: Takeo
 Nova identidade: Homem-Aranha
+
 -------------------------------------------------------------------------
 ## 🧰 Tecnologias Utilizadas
 
 •	☕ Java
 •	🧪 Sistema de repetição e lógica
 •	🖥️ Execução em console
+
 -------------------------------------------------------------------------
 ## 👥 Desenvolvedores – Grupo 7 (ADS Senac)
 
@@ -90,6 +98,7 @@ Nova identidade: Homem-Aranha
 •	Henrique Gonçalves Espíndola
 •	Leonardo Bacelar de Paula Barreto
 •	Giovani Teles de Paula
+
 -------------------------------------------------------------------------
 ## 🎉 Conclusão
 
