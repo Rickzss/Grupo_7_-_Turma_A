@@ -9,15 +9,14 @@ public class CasteloInfinito {
         Scanner sc = new Scanner(System.in);
 
         int opcao;
-        
-        
-         String personagem , anonimo;
+
+        String personagem, anonimo;
         String resposta;
+        
         // ================================= ESCOLHA DE PERSONAGEM  =================================
-         System.out.println("=== SISTEMA DE IDENTIDADE SECRETA ===");
-         
-         
-         
+       
+        System.out.println("=== SISTEMA DE IDENTIDADE SECRETA ===");
+
         System.out.println(" Digite o nome do seu personagem");
         personagem = sc.next();
         System.out.println(" Deseja ter a identidade secreta? ");
@@ -27,8 +26,7 @@ public class CasteloInfinito {
             System.out.println("Você escolheu nao assumir uma identidade secreta.");
             System.out.println("Nome verdadeiro registrado: " + personagem);
 
-        } else { 
-          
+        } else {
 
             System.out.println("\nVocê NÃO quer usar seu próprio nome!");
             System.out.println("Escolha uma nova identidade:");
@@ -37,16 +35,14 @@ public class CasteloInfinito {
             System.out.println("2 - Tanjiro (Demons layers)");
             System.out.print("Digite sua escolha: ");
             String escolha = sc.next();
-            
+
             String identidade = "";
 
             if (escolha.equals("1")) {
                 identidade = "Homem-Aranha ";
-            } 
-            else if (escolha.equals("2")) {
+            } else if (escolha.equals("2")) {
                 identidade = " Tanjiro ";
-            } 
-            else {
+            } else {
                 identidade = "Identidade desconhecida";
             }
 
@@ -54,7 +50,6 @@ public class CasteloInfinito {
             System.out.println("Nome do heroi: " + personagem);
             System.out.println("Nova identidade: " + identidade);
         }
-
 
         // ================================= MENU DO JOGO =================================
         do {
@@ -340,7 +335,8 @@ public class CasteloInfinito {
         System.out.println("\n Voce atingiu o limite de tentativas! O veneno de Wisteria foi lançado...");
         return -1;
     }
- // =================================== DESAFIO 5 =========================================
+    // =================================== DESAFIO 5 =========================================
+
     public static int Combate1(Scanner sc) {
 
         int tentativas = 0;
@@ -378,7 +374,8 @@ public class CasteloInfinito {
         System.out.println("\n Voce atingiu o limite de tentativas! Hisoka despertou muitos bonecos");
         return -1;
     }
- // =================================== DESAFIO 6 =========================================
+    // =================================== DESAFIO 6 =========================================
+
     public static int combate2(Scanner sc) {
 
         String resposta;
@@ -422,17 +419,18 @@ public class CasteloInfinito {
 
         int errosTotais = 0;
 
-            // --- Fase 1: Laço while ---
-            int errosFase1 = desafioTeiaRepetitiva(sc);
-            if (errosFase1 == -1) {
+        // --- Fase 1: Laço while ---
+        int errosFase1 = desafioTeiaRepetitiva(sc);
+        if (errosFase1 == -1) {
             System.out.println("Voce falhou no sentido aranha! Retornando ao menu de niveis...\n");
             jogar(sc);
             return;
         }
-             errosTotais += errosFase1;
+        errosTotais += errosFase1;
 
-            //--- Fase 2: Laço for ---
-            int errosFase2 = desafioContagemRespiracao(sc);{
+        //--- Fase 2: Laço for ---
+        int errosFase2 = desafioContagemRespiracao(sc);
+        {
             if (errosFase2 == -1) {
                 System.out.println("Voce errou na contagem dos ataques! Retornando ao menu de niveis...\n");
                 jogar(sc);
@@ -452,29 +450,29 @@ public class CasteloInfinito {
             // --- Fase 4: Laço While ---
             int errosFase4 = desafioBalancoSpiderMan(sc);
             if (errosFase4 == -1) {
-            System.out.println("Voce falhou no lancamento das teias! Retornando ao menu de niveis...\n");
-            jogar(sc);
-            return;
+                System.out.println("Voce falhou no lancamento das teias! Retornando ao menu de niveis...\n");
+                jogar(sc);
+                return;
             }
             errosTotais += errosFase4;
-            
+
             // --- Fase 5: Laco For ---
             int errosFase5 = desafioFormaDeRespiracao(sc);
             if (errosFase5 == -1) {
-             System.out.println("Voce falhou na concentracao da respiracao! Retornando ao menu de niveis...\n");
-            jogar(sc);
-             return;
-             }
+                System.out.println("Voce falhou na concentracao da respiracao! Retornando ao menu de niveis...\n");
+                jogar(sc);
+                return;
+            }
             errosTotais += errosFase5;
-            
+
             // --- Fase 6: Laco do-while ---
-            //int errosFase6 = desafioProvaCasteloInfinito(sc);
-            // if (errosFase6 == -1) {
-            //  System.out.println("Voce caiu no ciclo do Castelo Infinito! Retornando ao menu de niveis...\n");
-            //jogar(sc);
-            //return;
-            // }
-            //errosTotais += errosFase6;
+            int errosFase6 = desafioProvaCasteloInfinito(sc);
+            if (errosFase6 == -1) {
+                System.out.println("Voce caiu no ciclo do Castelo Infinito! Retornando ao menu de niveis...\n");
+                jogar(sc);
+                return;
+            }
+            errosTotais += errosFase6;
             System.out.println("\nPARABENS! Voce completou o Quiz de Criatividade do Cacador!\n");
 
             //--- Finalização e RANK ---
@@ -630,6 +628,7 @@ public class CasteloInfinito {
         return -1;
     }
 // =================================== DESAFIO 4 ===================================
+
     public static int desafioBalancoSpiderMan(Scanner sc) {
 
         final String respostaCorreta = "D";
@@ -708,8 +707,49 @@ public class CasteloInfinito {
         System.out.println("\n Voce atingiu o limite de tentativas! Falha na concentracao da respiração...\n");
         return -1;
     }
+// =================================== DESAFIO 6 ===================================
 
-    
+    public static int desafioProvaCasteloInfinito(Scanner sc) {
+
+        final String respostaCorreta = "B";
+        int tentativas = 0;
+        int erros = 0;
+
+        while (tentativas < 3) {
+            tentativas++;
+            System.out.println("\n--- Fase 6: Prova do Castelo (Laco do-while) ---");
+            System.out.println("Voce e forcado a lutar pelo menos uma vez (execucao minima.");
+            System.out.println("\nQual laco garante essa execucao antes de verificar a condicao de continuacao? (Tentativa " + tentativas + " /3)\n");
+            System.out.println("A) if (lutar)");
+            System.out.println("B) do { ... } while (lutar)"); // Resposta correta
+            System.out.println("C) while (lutar)");
+            System.out.println("D) for (int i = 0; i < 1; i++)\n");
+            System.out.println("Sua resposta (A, B, C ou D):\n");
+
+            String respostaUsuario = sc.next().toUpperCase();
+
+            if (respostaUsuario.equals(respostaCorreta)) {
+                System.out.println("Correto! O 'do-while' executa o bloco 'do' uma vez, e so depois checa o 'while'.");
+                return erros;
+            } else {
+                erros++;
+
+                if (respostaUsuario.matches("[A-D]")) {
+                    System.out.println("Incorreto! Voce sofreu 15 de dano. Tente novamente\n");
+                } else {
+                    System.out.println("Resposta invalida! Por favor, digite apenas A, B, C ou D.\n");
+
+                }
+
+            }
+
+        }
+
+        System.out.println("\n Voce atingiu o limite de tentativas! Falha na prova do castelo...\n");
+        return -1;
+
+    }
+
     // =================================== RANKING FINAL =====================================
     public static void exibirRanking(int errosTotais) {
 
