@@ -9,6 +9,19 @@ public class CasteloInfinito {
         Scanner sc = new Scanner(System.in);
 
         int opcao;
+        
+        
+         String personagem , anonimo;
+        String resposta;
+        // ================================= ESCOLHA DE PERSONAGEM  =================================
+         System.out.println("=== SISTEMA DE IDENTIDADE SECRETA ===");
+         
+         
+         
+        System.out.println(" Digite o nome do seu personagem");
+        personagem = sc.next();
+        System.out.println(" Deseja ter a identidade secreta? ");
+        resposta = sc.next();
 
         // ================================= MENU DO JOGO =================================
         do {
