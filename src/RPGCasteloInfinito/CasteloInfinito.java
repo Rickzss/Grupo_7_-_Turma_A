@@ -12,27 +12,26 @@ public class CasteloInfinito {
 
         String personagem, anonimo;
         String resposta;
-        
+
         // ================================= ESCOLHA DE PERSONAGEM  =================================
-       
         System.out.println("=== SISTEMA DE IDENTIDADE SECRETA ===");
 
-        System.out.println(" Digite o nome do seu personagem");
+        System.out.println("Digite o nome do seu personagem");
         personagem = sc.next();
-        System.out.println(" Deseja ter a identidade secreta? ");
+        System.out.println("\nDeseja ter a identidade secreta?\n ");
         resposta = sc.next();
         if (resposta.equalsIgnoreCase("não")) {
 
-            System.out.println("Você escolheu nao assumir uma identidade secreta.");
+            System.out.println("Voce escolheu nao assumir uma identidade secreta.");
             System.out.println("Nome verdadeiro registrado: " + personagem);
 
         } else {
 
-            System.out.println("\nVocê NÃO quer usar seu próprio nome!");
-            System.out.println("Escolha uma nova identidade:");
+            System.out.println("\nVoce NAO quer usar seu proprio nome!\n");
+            System.out.println("Escolha uma nova identidade:\n");
 
             System.out.println("1 - Homem-Aranha");
-            System.out.println("2 - Tanjiro (Demons layers)");
+            System.out.println("2 - Tanjiro (Demons Slayers)\n");
             System.out.print("Digite sua escolha: ");
             String escolha = sc.next();
 
@@ -46,15 +45,15 @@ public class CasteloInfinito {
                 identidade = "Identidade desconhecida";
             }
 
-            System.out.println("=== IDENTIDADE DEFINIDA ===");
-            System.out.println("Nome do heroi: " + personagem);
-            System.out.println("Nova identidade: " + identidade);
+            System.out.println("\n=== IDENTIDADE DEFINIDA ===\n");
+            System.out.println("Nome do heroi: " + personagem + "\n");
+            System.out.println("Nova identidade: " + identidade + "\n");
         }
 
         // ================================= MENU DO JOGO =================================
         do {
 
-            System.out.println("==========================");
+            System.out.println("\n==========================");
             System.out.println("==== Castelo Infinito ====");
             System.out.println("==========================\n");
             System.out.println("(1) Instrucoes");
@@ -179,7 +178,7 @@ public class CasteloInfinito {
         }
 
         errosTotais += errosFase6;
-
+        System.out.println("\nPARABENS! Voce completou o Quiz de Logica do Heroi!\n");
         // --- Finalização e RANK ---
         exibirRanking(errosTotais);
     }
@@ -197,12 +196,12 @@ public class CasteloInfinito {
 
         while (tentativas < 3) {
             tentativas++;
-            System.out.println("\nPERGUNTA: Quantas vezes a Respiracao Concentrada sera 'Ativada'? (Tentativa " + tentativas + "/3)");
-            System.out.println("A) 5 vezes");
+            System.out.println("\nPERGUNTA: Quantas vezes a Respiracao Concentrada sera 'Ativada'? (Tentativa " + tentativas + "/3)\n");
+            System.out.println("A) 5 vezes"); // Resposta correta
             System.out.println("B) 6 vezes");
             System.out.println("C) 4 vezes");
-            System.out.println("D) 10 vezes");
-            System.out.print("Sua resposta (A, B, C ou D): ");
+            System.out.println("D) 10 vezes\n");
+            System.out.print("Sua resposta (A, B, C ou D):\n ");
 
             String respostaUsuario = sc.next().toUpperCase();
 
@@ -212,14 +211,14 @@ public class CasteloInfinito {
             } else {
                 erros++;
                 if (respostaUsuario.matches("[A-D]")) {
-                    System.out.println("INCORRETO! O foco nao foi atingido.");
+                    System.out.println("INCORRETO! O foco nao foi atingido.\n");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.\n");
                 }
             }
         }
 
-        System.out.println("\nVoce atingiu o limite de tentativas! Falha na Respiracao Concentrada...");
+        System.out.println("\nVoce atingiu o limite de tentativas! Falha na Respiracao Concentrada...\n");
         return -1;
     }
 
@@ -235,12 +234,12 @@ public class CasteloInfinito {
 
         while (tentativas < 3) {
             tentativas++;
-            System.out.println("\nPERGUNTA: Incluindo a teia inicial (distancia 0), quantas teias serao disparadas no TOTAL? (Tentativa " + tentativas + "/3)");
+            System.out.println("\nPERGUNTA: Incluindo a teia inicial (distancia 0), quantas teias serao disparadas no TOTAL? (Tentativa " + tentativas + "/3)\n");
             System.out.println("A) 5 teias");
             System.out.println("B) 7 teias");
-            System.out.println("C) 6 teias");
-            System.out.println("D) 25 teias");
-            System.out.print("Sua resposta (A, B, C ou D): ");
+            System.out.println("C) 6 teias"); // Resposta correta
+            System.out.println("D) 25 teias\n");
+            System.out.print("Sua resposta (A, B, C ou D): \n");
 
             String respostaUsuario = sc.next().toUpperCase();
 
@@ -250,14 +249,14 @@ public class CasteloInfinito {
             } else {
                 erros++;
                 if (respostaUsuario.matches("[A-D]")) {
-                    System.out.println("INCORRETO! A sequencia do balanco esta errada.");
+                    System.out.println("INCORRETO! A sequencia do balanco esta errada.\n");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.\n");
                 }
             }
         }
 
-        System.out.println("\nVoce atingiu o limite de tentativas! O Aranha perdeu o balanco...");
+        System.out.println("\nVoce atingiu o limite de tentativas! O Aranha perdeu o balanco...\n");
         return -1;
     }
     // =================================== DESAFIO 3 =========================================
@@ -273,12 +272,12 @@ public class CasteloInfinito {
 
         while (tentativas < 3) {
             tentativas++;
-            System.out.println("\nPERGUNTA: Se a variavel booleana temChave for inicializada como false, o que acontecera com o codigo abaixo? (Tentativa" + tentativas + "/3)");
+            System.out.println("\nPERGUNTA: Se a variavel booleana temChave for inicializada como false, o que acontecera com o codigo abaixo? (Tentativa " + tentativas + "/3)\n");
             System.out.println("A) O laco executa infinitamente, travando o jogo.");
             System.out.println("B) A mensagem \"Nezuko tenta abrir a porta.\" nao sera exibida.");
-            System.out.println("C) A mensagem \"Nezuko tenta abrir a porta.\" sera exibida apenas uma vez.");
-            System.out.println("D) A mensagem \"A porta nao abre.\" nunca sera exibida.");
-            System.out.print("Sua resposta (A, B, C ou D): ");
+            System.out.println("C) A mensagem \"Nezuko tenta abrir a porta.\" sera exibida apenas uma vez."); // Resposta correta
+            System.out.println("D) A mensagem \"A porta nao abre.\" nunca sera exibida.\n");
+            System.out.print("Sua resposta (A, B, C ou D): \n");
 
             String respostaUsuario = sc.next().toUpperCase();
 
@@ -288,13 +287,13 @@ public class CasteloInfinito {
             } else {
                 erros++;
                 if (respostaUsuario.matches("[A-D]")) {
-                    System.out.println("INCORRETO! Tente outra vez.");
+                    System.out.println("INCORRETO! Tente outra vez.\n");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.\n");
                 }
             }
         }
-        System.out.println("\nVoce atingiu o limite de tentativas! A Nezuko ficou presa no castelo...");
+        System.out.println("\nVoce atingiu o limite de tentativas! A Nezuko ficou presa no castelo...\n");
         return -1;
     }
 
@@ -310,12 +309,12 @@ public class CasteloInfinito {
 
         while (tentativas < 3) {
             tentativas++;
-            System.out.println("\nPERGUNTA: No codigo a seguir, que representa o ataque, qual sera o ultimo valor exibido para a variavel aplicacoes apos a execucao completa dos lacos? (Tentativa" + tentativas + "/3)");
+            System.out.println("\nPERGUNTA: No codigo a seguir, que representa o ataque, qual sera o ultimo valor exibido para a variavel aplicacoes apos a execucao completa dos lacos? (Tentativa " + tentativas + "/3)\n");
             System.out.println("A) 7");
-            System.out.println("B) 12");
+            System.out.println("B) 12"); // Resposta correta
             System.out.println("C) 10");
-            System.out.println("D) 4");
-            System.out.print("Sua resposta (A, B, C ou D): ");
+            System.out.println("D) 4\n");
+            System.out.print("Sua resposta (A, B, C ou D): \n");
 
             String respostaUsuario = sc.next().toUpperCase();
 
@@ -325,14 +324,14 @@ public class CasteloInfinito {
             } else {
                 erros++;
                 if (respostaUsuario.matches("[A-D]")) {
-                    System.out.println("INCORRETO! O veneno sera lancado a qualquer momento.");
+                    System.out.println("INCORRETO! O veneno sera lancado a qualquer momento.\n");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.\n");
                 }
             }
         }
 
-        System.out.println("\n Voce atingiu o limite de tentativas! O veneno de Wisteria foi lançado...");
+        System.out.println("\n Voce atingiu o limite de tentativas! O veneno de Wisteria foi lançado...\n");
         return -1;
     }
     // =================================== DESAFIO 5 =========================================
@@ -341,37 +340,36 @@ public class CasteloInfinito {
 
         int tentativas = 0;
         int erros = 0;
-        System.out.println(" \nFASE5: No corredor do Castelo Infinito, voce percebe que o chao inteiro esta coberto por fios quase invisiveis.");
-        System.out.println("Cada passo desperta um boneco controlado por Hisoka");
-        System.out.println(" acertes as perguntas e tente derrotalo ");
+        System.out.println(" \nFASE 5: No corredor do Castelo Infinito, voce percebe que o chao inteiro esta coberto por fios quase invisiveis.");
+        System.out.println("Cada passo, aparece um oni controlado pelo Muzan");
+        System.out.println("Acerte as perguntas e tente derrota-los ");
 
-        while (tentativas < 3) {
+        while (tentativas < 2) {
             tentativas++;
             String resposta;
 
-            System.out.println(" voce tem 3 tentativas ");
-            System.out.println(" Qual laco de repeticao executa pelo menos UMA! vez antes de testar a condicao?");
+            System.out.println(" \nQual laco de repeticao executa pelo menos UMA! vez antes de testar a condicao? (Tentativa " + tentativas + "/2)\n");
             System.out.println("a) for");
             System.out.println("b) while");
-            System.out.println("c) do-while");
+            System.out.println("c) do-while\n");  // Resposta correta
             resposta = sc.next().toUpperCase();
 
             if (resposta.equalsIgnoreCase("c")) {
-                System.out.println(" Voce acerta a pergunta e consegue dar mais um passo ");
+                System.out.println(" Voce acerta a pergunta e consegue dar mais um passo\n");
 
                 return erros;
             } else {
                 erros++;
                 if (resposta.matches("[A-C]")) {
-                    System.out.println("INCORRETO! voce da um passo errado e surge uns dos bonecos do Hisoka");
+                    System.out.println("INCORRETO! Voce da um passo errado e surge ONIS controlados pelo Muzan\n");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B ou C.\n");
                 }
 
             }
 
         }
-        System.out.println("\n Voce atingiu o limite de tentativas! Hisoka despertou muitos bonecos");
+        System.out.println("\n Voce atingiu o limite de tentativas! Muzan te transformou em um ONI...\n");
         return -1;
     }
     // =================================== DESAFIO 6 =========================================
@@ -382,31 +380,34 @@ public class CasteloInfinito {
         int tentativas = 0;
         int erros = 0;
 
-        while (tentativas < 3) {
+        System.out.println(" \nFASE 6: Ao final do Castelo Infinito, Muzan aparece para lhe enfrentar.");
+        System.out.println("Voce precisa acertar uma sequencia de golpes para derrota-lo");
+        System.out.println("Acerte a pergunta para derrota-lo e enfim sair do Castelo Infinito ");
+
+        while (tentativas < 2) {
             tentativas++;
-            System.out.println(" 2Round ");
-            System.out.println(" voce tem 3 tentativas ");
-            System.out.println(" Qual laco e ideal quando voce sabe exatamente quantas repeticoes deseja?");
-            System.out.println("a) for");
+
+            System.out.println(" \nQual laco e ideal quando voce sabe exatamente quantas repeticoes deseja? (Tentativa " + tentativas + "/2)\n");
+            System.out.println("a) for"); // Resposta correta
             System.out.println("b) while");
-            System.out.println("c) do-while");
+            System.out.println("c) do-while\n");
             resposta = sc.next().toUpperCase();
 
             if (resposta.equalsIgnoreCase("a")) {
-                System.out.println("Voce acerta a pergunta e consegue dar mais um passo");
+                System.out.println("Parabens! Voce escapou do Castelo Infinito!\n");
                 return erros;
             } else {
                 erros++;
                 if (resposta.matches("[A-C]")) {
-                    System.out.println("INCORRETO! Voce da um passo errado e surge uns dos bonecos do Hisoka ");
+                    System.out.println("INCORRETO! Muzan desferiu um golpe e voce fica envenenado\n ");
                 } else {
-                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B, C ou D.");
+                    System.out.println("RESPOSTA INVALIDA! Digite apenas A, B ou C.\n");
                 }
 
             }
 
         }
-        System.out.println("\n Voce atingiu o limite de tentativas! Hisoka despertou muitos bonecos");
+        System.out.println("\n Voce atingiu o limite de tentativas! Muzan acabou com voce e com todos os cacadores de ONIS!\n");
         return -1;
     }
 
