@@ -1,10 +1,10 @@
-RPG Castelo Infinito – Java
+## **RPG Castelo Infinito – Java**
 
-Um RPG Textual Educacional para Aprender Laços de Repetição
+## **Um RPG Textual Educacional para Aprender Laços de Repetição**
 
-Inspirado em Demon Slayer – Castelo Infinito e Marvel’s Spider-Man
+## **Inspirado em Demon Slayer – Castelo Infinito e Marvel’s Spider-Man**
 -------------------------------------------------------------------------
-Visão Geral
+## **Visão Geral**
 
 RPG Castelo Infinito é um jogo textual desenvolvido em Java como projeto acadêmico do Grupo 7 da turma A de ADS (Senac).
 
@@ -21,7 +21,7 @@ Durante o jogo, o jogador entra no castelo, escolhe sua identidade (real ou secr
 •	laços aninhados
 
 -------------------------------------------------------------------------
-Objetivo Educacional
+## **Objetivo Educacional**
 
 O jogo foi criado para facilitar o aprendizado prático de estruturas de repetição.
 Cada fase apresenta:
@@ -33,7 +33,7 @@ Cada fase apresenta:
 Isso torna o estudo interativo, contextualizado e memorável.
 
 -------------------------------------------------------------------------
-Funcionalidades
+## **Funcionalidades**
 
 • Sistema de identidade secreta<br>
 • Dois caminhos de jogo (Lógico e Criativo)<br>
@@ -44,10 +44,11 @@ Funcionalidades
 • Jogabilidade totalmente no console<br>
 
 -------------------------------------------------------------------------
-Modos de Jogo
+## **Modos de Jogo**
 
-- Caminho Lógico
+- Caminho Lógico<br>
 Para quem quer aprender loops de forma direta e objetiva.
+
 Inclui perguntas e códigos envolvendo:
 
 •	while<br>
@@ -57,8 +58,9 @@ Inclui perguntas e códigos envolvendo:
 •	execução mínima<br>
 •	repetição com contagem conhecida<br>
 
-- Caminho Criativo
+- Caminho Criativo<br>
 Focado em narrativa e contextualização.
+
 Explicações mais descritivas envolvendo:
 
 •	Sentido-Aranha<br>
@@ -67,7 +69,7 @@ Explicações mais descritivas envolvendo:
 •	Situações de resgate e combate<br>
 
 -------------------------------------------------------------------------
-Exemplo de Execução
+## **Exemplo de Execução**
 
 === SISTEMA DE IDENTIDADE SECRETA ===<br>
 Digite o nome do seu personagem:<br>
@@ -84,14 +86,14 @@ Nome do herói: Takeo<br>
 Nova identidade: Homem-Aranha<br>
 
 -------------------------------------------------------------------------
-Tecnologias Utilizadas
+## **Tecnologias Utilizadas**
 
 •	Java<br>
 •	Sistema de repetição e lógica<br>
 •	Execução em console<br>
 
 -------------------------------------------------------------------------
-Desenvolvedores – Grupo 7 (ADS Senac)
+## **Desenvolvedores – Grupo 7 (ADS Senac)**
 
 •	Eduardo Alcantara de Souza<br>
 •	Flavio da Silva Batista<br>
@@ -100,7 +102,7 @@ Desenvolvedores – Grupo 7 (ADS Senac)
 •	Giovani Teles de Paula<br>
 
 -------------------------------------------------------------------------
-Conclusão
+## **Conclusão**
 
 O RPG Castelo Infinito combina narrativa, diversão e ensino de programação.<br>
 É uma forma criativa de aprender laços de repetição enquanto vive uma aventura dentro do misterioso Castelo Infinito.
