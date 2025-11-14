@@ -22,6 +22,39 @@ public class CasteloInfinito {
         personagem = sc.next();
         System.out.println(" Deseja ter a identidade secreta? ");
         resposta = sc.next();
+        if (resposta.equalsIgnoreCase("não")) {
+
+            System.out.println("Você escolheu nao assumir uma identidade secreta.");
+            System.out.println("Nome verdadeiro registrado: " + personagem);
+
+        } else { 
+          
+
+            System.out.println("\nVocê NÃO quer usar seu próprio nome!");
+            System.out.println("Escolha uma nova identidade:");
+
+            System.out.println("1 - Homem-Aranha");
+            System.out.println("2 - Tanjiro (Demons layers)");
+            System.out.print("Digite sua escolha: ");
+            String escolha = sc.next();
+            
+            String identidade = "";
+
+            if (escolha.equals("1")) {
+                identidade = "Homem-Aranha ";
+            } 
+            else if (escolha.equals("2")) {
+                identidade = " Tanjiro ";
+            } 
+            else {
+                identidade = "Identidade desconhecida";
+            }
+
+            System.out.println("=== IDENTIDADE DEFINIDA ===");
+            System.out.println("Nome do heroi: " + personagem);
+            System.out.println("Nova identidade: " + identidade);
+        }
+
 
         // ================================= MENU DO JOGO =================================
         do {
